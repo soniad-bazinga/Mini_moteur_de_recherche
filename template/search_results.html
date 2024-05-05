@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Résultat de recherche</title>
+    </head>
+    <body>
+        <h1>Résultats de la recherche</h1>
+        <ul>
+            {% for result in search_results %}
+            <li>
+                Lien Wikipedia: <a href="{{result.link[1]}}" target ="_blank">{{result.link[0]}}</a>, ID: {{ result.page_id }}, score de fréquence: {{result.score}}
+            </li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>
